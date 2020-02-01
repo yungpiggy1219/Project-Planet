@@ -2,36 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet:MonoBehaviour
+public class Planet
 {
     private Environment env;
     private Resource[] resources_polluted;
     private Resource[] resources;
     private SpriteRenderer sprite;
 
-    public Planet(string env_type)
+    public Planet(Environment env, Resource[] rp, Resource[]r)
     {
-        env = new Environment(num_planets , env_type);
-        resources_polluted = new Resource[num_planets];
-        resources = new Resource[num_planets];
+        this.env = env;
+        resources_polluted = rp;
+        resources = r;
     }
-    private void receiveResource(string resource_name, int count)
-    {
-       switch (resourceName){
-            case "water":
-                resources[0].allocate(count);
-                break;
-            case "sunlight":
-                resources[1].allocate(count);
-                break;
-            case "ozone":
-                resources[2].allocate(count);
-                break;
-            case "nutrients":
-                resources[3].allocate(count);
-                break;
-    }
-    }
+
     private Resource[] getResources()
     {
         return resources;
@@ -63,8 +47,4 @@ public class Planet:MonoBehaviour
         resources[resource_type].allocate(amount);
     }
 
-    private Environment getEnv()
-    {
-        return env;
-    }
 }

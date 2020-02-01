@@ -19,7 +19,7 @@ public struct Environment
                 ret = new int[] { 7, 4, 2, 6 };
                 ratio = new Ratio(num_resource_types, ret);
                 break;
-            case "Jungle":
+            case "Rainforest":
                 tolerance = 2;
                  ret = new int[] { 6, 7, 5, 6};
                 ratio = new Ratio(num_resource_types, ret);

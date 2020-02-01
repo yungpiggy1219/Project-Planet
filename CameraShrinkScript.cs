@@ -16,9 +16,8 @@ public class CameraShrinkScript : MonoBehaviour
         // shrink relative to camera position
         float hyp = Vector3.Distance(gameObject.transform.localPosition, Camera.main.transform.localPosition); // hypo
         // distance is closer, scale is bigger
-        hyp = 100 / Mathf.Sqrt(hyp);
-        print(hyp);
-        float size_sphere = 8;
+        hyp = 8/ hyp;
+        float size_sphere = 1;
         gameObject.transform.localScale = new Vector3(hyp*size_sphere, hyp*size_sphere, hyp*size_sphere);
     }
 }
