@@ -8,14 +8,18 @@ public class Planet
     private Resource[] resources_polluted;
     private Resource[] resources;
     private SpriteRenderer sprite;
+    const int num_planets = 4;
 
-    public Planet(Environment env, Resource[] rp, Resource[]r)
+    public Planet(Environment env)
     {
         this.env = env;
-        resources_polluted = rp;
-        resources = r;
+        resources = new Resource[num_planets];
+        resources_polluted = new Resource[num_planets];
     }
-
+    public void receiveResources(int resource_type, int amount)
+    {
+        resources[resource_type].allocate(amount);
+    }
     private Resource[] getResources()
     {
         return resources;
@@ -46,5 +50,8 @@ public class Planet
         resources_polluted[resource_type].remove(amount);
         resources[resource_type].allocate(amount);
     }
-
+    public Environment getEnv()
+    {
+        return env;
+    }
 }

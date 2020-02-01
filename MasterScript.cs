@@ -16,8 +16,8 @@ public class MasterScript : MonoBehaviour
         planets = new Planet[num_planets];
         for(int i = 0; i < num_planets; i++) // make planets
         {
-            planets[i] = new Planet(env_names[i]); // each planet represents an ecosystem
-            int[] goldenRatio = planets[i].getEnv().getGoldenRatio(); // get golden ratios of each resource of that environment
+            planets[i] = new Planet(new Environment(num_planets, env_names[i])); // each planet represents an ecosystem
+            int[] goldenRatio = planets[i].getEnv().getGoldenRatio().getRatio(); // get golden ratios of each resource of that environment
             int sum = 0; 
             for(int j = 0; j < num_planets; j++)
             {
@@ -26,7 +26,7 @@ public class MasterScript : MonoBehaviour
             int dividend = (int)(planet_resource_factor / sum);
             for(int k = 0; k < num_planets; k++)
             {
-                planets.recieveResource(dividend*goldenRatio[i]);
+                planets[k].recieveResources(k, dividend*goldenRatio[k]);
             }
         }
         int[] r = new int[num_planets];

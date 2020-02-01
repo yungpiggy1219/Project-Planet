@@ -4,15 +4,13 @@ using UnityEngine;
 
 public struct Resource
 {
-    private SpriteRenderer sprite;
+    private Sprite sprite;
     private string resource_type;
     private int count;
 
     public Resource(string resource_type, int count)
     {
-        GameObject fruit;
-        GameObject banana = Instantiate(nutrients); 
-        sprite = Instantiate();
+        sprite = Resources.Load<Sprite>("nutrients");
         this.resource_type = resource_type;
         this.count = count;
     }
