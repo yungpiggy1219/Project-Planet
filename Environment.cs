@@ -45,6 +45,10 @@ public struct Environment
     {
         return ratio;
     }
+    public string getName()
+    {
+        return name;
+    }
     public int getTolerance()
     {
         return tolerance;

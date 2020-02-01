@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Player
 {
-    private int[] resources;
-    private int[] resources_polluted;
-
+    private Resource[] resources;
+    private Resource[] resources_polluted;
+    
+    public Player(Resource[] r, Resource[] rp)
+    {
+        resources = r;
+        resources_polluted = rp;
+    }
 }

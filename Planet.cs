@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Planet
 {
+    public GameObject planet;
     private Environment env;
     private Resource[] resources_polluted;
     private Resource[] resources;
-    private SpriteRenderer sprite;
+    private Sprite sprite;
     const int num_planets = 4;
 
     public Planet(Environment env)
@@ -15,6 +16,7 @@ public class Planet
         this.env = env;
         resources = new Resource[num_planets];
         resources_polluted = new Resource[num_planets];
+        sprite = sprite = Resources.Load<Sprite>("desert");
     }
     public void receiveResources(int resource_type, int amount)
     {
