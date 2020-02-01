@@ -9,13 +9,29 @@ public class Planet:MonoBehaviour
     private Resource[] resources;
     private SpriteRenderer sprite;
 
-    public Planet(Environment env, Resource[] rp, Resource[]r)
+    public Planet(string env_type)
     {
-        this.env = env;
-        resources_polluted = rp;
-        resources = r;
+        env = new Environment(num_planets , env_type);
+        resources_polluted = new Resource[num_planets];
+        resources = new Resource[num_planets];
     }
-
+    private void receiveResource(string resource_name, int count)
+    {
+       switch (resourceName){
+            case "water":
+                resources[0].allocate(count);
+                break;
+            case "sunlight":
+                resources[1].allocate(count);
+                break;
+            case "ozone":
+                resources[2].allocate(count);
+                break;
+            case "nutrients":
+                resources[3].allocate(count);
+                break;
+    }
+    }
     private Resource[] getResources()
     {
         return resources;
@@ -47,4 +63,8 @@ public class Planet:MonoBehaviour
         resources[resource_type].allocate(amount);
     }
 
+    private Environment getEnv()
+    {
+        return env;
+    }
 }

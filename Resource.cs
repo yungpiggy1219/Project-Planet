@@ -8,10 +8,10 @@ public class Resource
     private string resource_type;
     private int count;
 
-    public Resource(string resource_type, int count)
+    public Resource(string resource_type)
     {
         this.resource_type = resource_type;
-        this.count = count;
+        count = 0;
     }
     public int getCount()
     {

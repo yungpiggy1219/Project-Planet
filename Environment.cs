@@ -12,14 +12,14 @@ public struct Environment
     {
         name = environmentName;
         int[] ret;
-        switch (environmentName) // add ecosystemys/environments here by case
+        switch (environmentName) // add ecosystems/environments here by case
         {
             case "Ocean Reef":
                 tolerance = 1;
                 ret = new int[] { 7, 4, 2, 6 };
                 ratio = new Ratio(num_resource_types, ret);
                 break;
-            case "Rainforest":
+            case "Jungle":
                 tolerance = 2;
                  ret = new int[] { 6, 7, 5, 6};
                 ratio = new Ratio(num_resource_types, ret);

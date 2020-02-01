@@ -2,19 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player
 {
-    private int[] resources;
-    private int[] resources_polluted;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Resource[] resources;
+    private Resource[] resources_polluted;
 
-    // Update is called once per frame
-    void Update()
+    public Player(int[]r, int[]rp)
     {
-        
+        resourses = r;
+        resources = rp;
     }
 }
