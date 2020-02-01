@@ -7,6 +7,7 @@ public class Resource
     private SpriteRenderer sprite;
     private string resource_type;
     private int count;
+
     public Resource(string resource_type, int count)
     {
         this.resource_type = resource_type;

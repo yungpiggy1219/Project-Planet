@@ -7,11 +7,12 @@ public struct Environment
     public Ratio ratio;
     public string name;
     public int tolerance;
+
     public Environment(int num_resource_types, string environmentName)
     {
         name = environmentName;
         int[] ret;
-        switch (environmentName)
+        switch (environmentName) // add ecosystemys/environments here by case
         {
             case "Ocean Reef":
                 tolerance = 1;
@@ -39,5 +40,13 @@ public struct Environment
                 ratio = new Ratio(0, ret);
                 break;
         }
+    }
+    public Ratio getGoldenRatio()
+    {
+        return ratio;
+    }
+    public int getTolerance()
+    {
+        return tolerance;
     }
 }

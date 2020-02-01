@@ -20,4 +20,8 @@ public struct Ratio
             ratio = specific_ratio;
         }
     }
+    public int[] getRatio()
+    {
+        return ratio;
+    }
 }
