@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8b918a00023763a499022d6f0ff665a8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Reyburn
+  fontNames:
+  - Reyburn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fe1ab84cfa396dc4ca54a540d8bc5d43, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
